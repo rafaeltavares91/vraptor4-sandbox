@@ -1,0 +1,43 @@
+<ehcache>
+
+	<diskStore path="/opt/cache" />
+	
+	<defaultCache 
+		maxElementsInMemory="1000"
+		eternal="false"
+		timeToIdleSeconds="60" 
+		timeToLiveSeconds="120" 
+		overflowToDisk="true"
+		maxElementsOnDisk="100000" 
+		diskExpiryThreadIntervalSeconds="120" 
+		memoryStoreEvictionPolicy="LRU" />
+		
+		
+	<cache name="testando"
+		maxElementsInMemory="1000"
+		eternal="false"
+		timeToIdleSeconds="60" 
+		timeToLiveSeconds="120" 
+		overflowToDisk="true"
+		maxElementsOnDisk="100000" 
+		diskExpiryThreadIntervalSeconds="120" 
+		memoryStoreEvictionPolicy="LRU" />
+           
+</ehcache>
+
+
+
+<!-- 
+
+maxElementsInMemory: máximo de objetos em memória
+eternal: eternamente em memória?
+timeToIdleSeconds: tempo para morrer caso ninguém utilize
+timeToLiveSeconds: tempo vivo, independente de utilização
+overflowToDisk: sempre que atingir o máximo, ele vai salvar no disco
+maxElementsOnDisk: máximo de entidades no disco
+diskExpiryThreadIntervalSeconds tempo que as entidades vão ficar no disco
+memoryStoreEvictionPolicy: como vai gerenciar a memória, LRU = menos utilizado recentemente
+
+OBS: timeToIdleSeconds e timeToLiveSeconds só entram em funcionamento caso eternal seja falso
+
+ -->

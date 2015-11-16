@@ -1,0 +1,64 @@
+package br.edu.unirn.controlador;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import br.com.caelum.vraptor.Controller;
+import br.com.caelum.vraptor.Get;
+import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.view.Results;
+import br.edu.unirn.anotacoes.Transacional;
+import br.edu.unirn.modelo.dao.UsuarioDao;
+import br.edu.unirn.modelo.entidade.Usuario;
+
+@Controller
+public class UsuarioController {
+
+	private Result result;
+	private UsuarioDao usuarioDao;
+	
+	@Inject
+	public UsuarioController(Result result, UsuarioDao usuarioDao){
+		this.result = result;
+		this.usuarioDao = usuarioDao;
+	}
+	
+	public UsuarioController(){
+		this(null, null);
+	}
+	
+	public void form(){
+	}
+	
+	@Transacional
+	public void salvar(Usuario usuario){
+		usuarioDao.salvar(usuario);
+		result.redirectTo(this).lista();
+	}
+	
+	@Get
+	public void lista() {
+		List<Usuario> usuarioList = usuarioDao.listarTodos();
+		result.include("usuarioList", usuarioList);
+	}
+	
+	@Get
+	public void listar() {
+		List<Usuario> usuarioList = usuarioDao.listarTodos();
+		result.use(Results.json()).from(usuarioList).recursive().serialize();
+    }
+	
+	@Transacional
+	public void editar(Long id) {
+		Usuario usuario = usuarioDao.buscar(id);
+		result.include(usuario);
+		result.redirectTo(this).form();
+	}
+	
+	@Transacional
+	public void deletar(Long id) {
+		usuarioDao.deletar(id);
+		result.redirectTo(this).lista();
+	}
+}
