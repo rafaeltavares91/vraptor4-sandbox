@@ -1,17 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Listar Produto</title>
-</head>
-<body>
-	<jsp:include page="/WEB-INF/jsp/layout/topo.jsp" />
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib prefix="tags" uri="http://www.ufrn.br/tags" %>
 
-	<div class="container">
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
+<tags:layout>
+	<jsp:body>
 		<ul id="tabs" class="nav nav-tabs" >
 			<li class="active"><a href="#">Pesquisa</a></li>
 			<li><a href="${linkTo[ProdutoController].form}">Cadastro</a></li>
@@ -28,7 +24,7 @@
 					<tr>
 						<th>Nome</th>
 						<th>Categoria</th>
-						<th>Ação</th>
+						<th>AÃ§Ã£o</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -45,8 +41,5 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
-	<br/>
-	<jsp:include page="/WEB-INF/jsp/layout/footer.jsp" />
-</body>
-</html>
+	</jsp:body>
+</tags:layout>

@@ -1,18 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cadastrar Produto</title>
-</head>
-<body>
-	
-	<jsp:include page="/WEB-INF/jsp/layout/topo.jsp"/>
-	
-	<div class="container">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib prefix="tags" uri="http://www.ufrn.br/tags" %>
 
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+
+<tags:layout>
+	<jsp:body>
 		<ul class="nav nav-tabs">
 			<li><a href="${linkTo[ProdutoController].lista}">Pesquisa</a></li>
 			<li class="active"><a href="#">Cadastro</a></li>
@@ -47,10 +42,5 @@
 				</fieldset>
 			</form>
 		</div>
-	</div>
-	<jsp:include page="/WEB-INF/jsp/layout/footer.jsp" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript">
-    </script>
-</body>
-</html>
+	</jsp:body>
+</tags:layout>
