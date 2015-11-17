@@ -10,7 +10,6 @@
 		<class>br.edu.unirn.modelo.entidade.Usuario</class>
 		<class>br.edu.unirn.modelo.entidade.Produto</class>
 		<class>br.edu.unirn.modelo.entidade.Categoria</class>
-		<class>br.edu.unirn.modelo.entidade.Compra</class>
 
 		<properties>
 		

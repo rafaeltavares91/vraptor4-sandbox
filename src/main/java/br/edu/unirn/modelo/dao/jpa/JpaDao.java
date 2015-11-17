@@ -1,4 +1,7 @@
-package br.edu.unirn.commons.dao;
+package br.edu.unirn.modelo.dao.jpa;
+
+import br.edu.unirn.modelo.entidade.Entidade;
+import br.edu.unirn.modelo.dao.Dao;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;

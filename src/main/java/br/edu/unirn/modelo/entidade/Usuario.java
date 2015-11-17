@@ -9,8 +9,6 @@ import javax.persistence.SequenceGenerator;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import br.edu.unirn.commons.dao.Entidade;
-
 @Entity
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Usuario extends Entidade {

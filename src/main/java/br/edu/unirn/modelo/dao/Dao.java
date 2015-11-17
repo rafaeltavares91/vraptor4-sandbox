@@ -1,4 +1,4 @@
-package br.edu.unirn.commons.dao;
+package br.edu.unirn.modelo.dao;
 
 import java.io.Serializable;
 import java.util.List;

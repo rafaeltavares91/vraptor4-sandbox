@@ -10,8 +10,6 @@ import javax.persistence.SequenceGenerator;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import br.edu.unirn.commons.dao.Entidade;
-
 @Entity
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE, region = "testando")

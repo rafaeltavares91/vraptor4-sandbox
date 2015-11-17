@@ -4,7 +4,6 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import br.edu.unirn.commons.dao.JpaDao;
 import br.edu.unirn.modelo.dao.CategoriaDao;
 import br.edu.unirn.modelo.entidade.Categoria;
 

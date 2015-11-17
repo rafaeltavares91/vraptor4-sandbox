@@ -5,7 +5,6 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.edu.unirn.commons.dao.JpaDao;
 import br.edu.unirn.modelo.dao.UsuarioDao;
 import br.edu.unirn.modelo.entidade.Usuario;
 
