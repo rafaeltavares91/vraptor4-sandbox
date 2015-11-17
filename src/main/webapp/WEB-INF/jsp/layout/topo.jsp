@@ -5,7 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="<c:url value="/resources/datatables/css/jquery.dataTables.css" />">
+<link rel="stylesheet" href="<c:url value="/resources/datatables/css/dataTables.css" />">
+<link rel="stylesheet" href="<c:url value="/resources/datatables/css/dataTables.custom.css" />">
+<link rel="stylesheet" href="<c:url value="/resources/datatables/css/DT_bootstrap.css" />">
+<link rel="stylesheet" href="<c:url value="/resources/datatables/css/dataTables.fontAwesome.css" />">
+<link rel="stylesheet" href="<c:url value="/resources/estilo.css" />">
 <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap.min.css" />">
 </head>
 <body>
@@ -20,7 +24,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="http://logiquesistemas.com.br/">
-					<img src=<c:url value="/resources/bootstrap/imagens/logo.png" /> alt="Logique Sistemas">
+					<img src=<c:url value="/resources/imagens/logo.png" /> alt="Logique Sistemas">
 				</a>
 			</div>
 
@@ -53,6 +57,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="<c:url value="/resources/bootstrap/js/bootstrap.min.js"/>"></script>
 	<script src="<c:url value="/resources/datatables/js/jquery.dataTables.js"/>"></script>
+	<script src="<c:url value="/resources/datatables/js/DT_bootstrap.js"/>"></script>
 	<script src="<c:url value="/resources/tabela.js"/>"></script>
 </body>
 </html>

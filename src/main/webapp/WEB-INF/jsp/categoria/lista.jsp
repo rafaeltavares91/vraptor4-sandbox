@@ -21,29 +21,29 @@
 		<a href="${linkTo[CategoriaController].form}" class="btn btn-primary">
 			<span class="glyphicon glyphicon-plus"></span>Nova Categoria
 		</a>
-		
-		<br /> <br /> <br />
-		<table id="dataTable" class="table table-striped">
-			<thead>
-				<tr>
-					<th>Nome</th>
-					<th>Ação</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${categoriaList}" var="categoria">
+
+		<div class="adv-table">
+			<table id="dataTable" class="table table-striped table-bordered">
+				<thead>
 					<tr>
-						<td>${categoria.nome}</td>
-						<td>
-							<a href="${linkTo[CategoriaController].editar}?id=${categoria.id}"> <span class="glyphicon glyphicon-edit"></span> Editar </a>  
-							<a href="${linkTo[CategoriaController].deletar}?id=${categoria.id}"> <span class="glyphicon glyphicon-trash"></span> Deletar </a>
-						</td>
+						<th>Nome</th>
+						<th>Ação</th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach items="${categoriaList}" var="categoria">
+						<tr>
+							<td>${categoria.nome}</td>
+							<td>
+								<a href="${linkTo[CategoriaController].editar}?id=${categoria.id}"> <span class="glyphicon glyphicon-edit"></span> Editar </a>
+								<a href="${linkTo[CategoriaController].deletar}?id=${categoria.id}"> <span class="glyphicon glyphicon-trash"></span> Deletar </a>
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
 	</div>
-	<br/>
 	<jsp:include page="/WEB-INF/jsp/layout/footer.jsp" />
 </body>
 </html>

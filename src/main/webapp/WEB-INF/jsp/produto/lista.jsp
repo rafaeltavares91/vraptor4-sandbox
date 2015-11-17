@@ -22,8 +22,8 @@
 			<span class="glyphicon glyphicon-plus"></span>Novo Produto
 		</a>
 		
-		<br /> <br /> <br />
-			<table id="dataTable" class="table table-striped">
+		<div class="adv-table">
+			<table id="dataTable" class="table table-striped table-bordered">
 				<thead>
 					<tr>
 						<th>Nome</th>
@@ -44,6 +44,7 @@
 					</c:forEach>
 				</tbody>
 			</table>
+		</div>
 	</div>
 	<br/>
 	<jsp:include page="/WEB-INF/jsp/layout/footer.jsp" />
