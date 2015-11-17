@@ -40,12 +40,12 @@
 						</select>
 					</div>
 
-					<br />
-					<a href="${linkTo[ProdutoController].lista}" class="btn btn-default" role="button">Voltar</a>
-					<button type="submit" class="btn btn-primary">Salvar</button>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary"> <i class="fa fa-check"> </i> <span>Salvar</span> </button>
+						<a href="${linkTo[ProdutoController].lista}" class="btn btn-default" role="button"> <i class="fa fa-reply"> </i> <span>Voltar</span> </a>
+					</div>
 				</fieldset>
 			</form>
-			<br />
 		</div>
 	</div>
 	<jsp:include page="/WEB-INF/jsp/layout/footer.jsp" />
