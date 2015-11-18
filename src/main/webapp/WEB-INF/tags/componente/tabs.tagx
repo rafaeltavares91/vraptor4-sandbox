@@ -1,0 +1,21 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:jsp="http://java.sun.com/JSP/Page">
+    <ul id="tabs" class="nav nav-tabs">
+
+        <jsp:directive.attribute name="link" required="true" rtexprvalue="true" description="Endereço de destino"/>
+        <jsp:directive.attribute name="isForm" required="true" rtexprvalue="true" description="Define se a tab ativa é form ou list"/>
+
+        <c:choose>
+            <c:when test="${isForm}">
+                <li> <a href="${link}">Pesquisa</a> </li>
+                <li class="active"> <a href="#">Cadastro</a> </li>
+            </c:when>
+            <c:otherwise>
+                <li class="active"> <a href="#">Pesquisa</a> </li>
+                <li> <a href="${link}">Cadastro</a> </li>
+            </c:otherwise>
+        </c:choose>
+
+    </ul>
+    <br/>
+</div>

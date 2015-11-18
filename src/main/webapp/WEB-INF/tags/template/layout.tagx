@@ -76,7 +76,7 @@
 
                     <div class="col-sm-4">
                         <h6 style="color: #FFFFFF">Sobre</h6>
-                        <p style="font-size: 11px; color: #FFFFFF;">Sou analista e desenvolvedor de software, possuo conhecimento em tecnologias da plataforma Java como JavaServer Faces, PrimeFaces, Vraptor 4, Spring, CDI, JPA, Hibernate, Maven... Bancos de dados SQL Server e PostgreSQL. Frontend com HTML5, CSS3 e Bootstrap.</p>
+                        <p style="font-size: 11px; color: #FFFFFF;">Sou analista e desenvolvedor de software, possuo conhecimento em tecnologias da plataforma Javacomo JavaServer Faces, PrimeFaces, Vraptor 4, Spring, CDI, JPA, Hibernate, Maven... Bancos de dados SQL Server e PostgreSQL. Frontend com HTML5, CSS3 e Bootstrap.</p>
                     </div>
 
                     <div class="col-sm-2">

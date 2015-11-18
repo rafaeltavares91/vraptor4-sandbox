@@ -7,12 +7,7 @@
 
 <tags:layout>
 	<jsp:body>
-		<ul class="nav nav-tabs">
-			<li><a href="${linkTo[UsuarioController].lista}">Pesquisa</a></li>
-			<li class="active"><a href="#">Cadastro</a></li>
-		</ul>
-
-		<br />
+		<tags:tabs link="${linkTo[UsuarioController].lista}" isForm="${true}" />
 
 		<form role="form" action="${linkTo[UsuarioController].salvar}" method="post">
 			<fieldset>
