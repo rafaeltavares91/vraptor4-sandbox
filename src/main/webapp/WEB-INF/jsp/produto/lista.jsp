@@ -17,8 +17,8 @@
 					<td>${produto.nome}</td>
 					<td>${produto.categoria.nome}</td>
 					<td>
-						<a href="${linkTo[ProdutoController].editar}?id=${produto.id}" class="btn btn-warning btn-xs"> <span class="glyphicon glyphicon-edit"></span> Editar </a>
-						<a href="${linkTo[ProdutoController].deletar}?id=${produto.id}" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> Deletar </a>
+						<a href="${linkTo[ProdutoController].editar}?id=${produto.id}" class="btn btn-warning btn-xs"> <span class="fa fa-edit"></span> Editar </a>
+						<a href="${linkTo[ProdutoController].deletar}?id=${produto.id}" class="btn btn-danger btn-xs"> <span class="fa fa-trash-o"></span> Deletar </a>
 					</td>
 				</tr>
 			</c:forEach>

@@ -40,10 +40,10 @@
                         <li><a href="${linkTo[UsuarioController].lista}">Usuário</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"><c:out value=""/></span> User Login </a></li>
+                        <li><a href="#"><span class="fa fa-user"><c:out value=""/></span> User Login </a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <span class="glyphicon glyphicon-cog"><c:out value=""/></span>
+                                <span class="fa fa-cog"><c:out value=""/></span>
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
@@ -100,7 +100,7 @@
 
                     <div class="col-sm-2">
                         <h6 style="color: #FFFFFF">
-                            Coded with <span class="glyphicon glyphicon-heart"><c:out value=""/></span> by Rafael
+                            Coded with <span class="fa fa-heart"><c:out value=""/></span> by Rafael
                         </h6>
                     </div>
                 </div>

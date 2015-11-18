@@ -7,9 +7,9 @@
 
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<class>br.edu.unirn.modelo.entidade.Usuario</class>
-		<class>br.edu.unirn.modelo.entidade.Produto</class>
-		<class>br.edu.unirn.modelo.entidade.Categoria</class>
+		<class>br.ufrn.modelo.entidade.Usuario</class>
+		<class>br.ufrn.modelo.entidade.Produto</class>
+		<class>br.ufrn.modelo.entidade.Categoria</class>
 
 		<properties>
 		

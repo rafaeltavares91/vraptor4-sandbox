@@ -5,6 +5,6 @@
 
     <jsp:directive.attribute name="link" required="true" rtexprvalue="true" description="Endereço de destino" />
 
-    <span class="glyphicon glyphicon-plus"><c:out value=" " /></span> Novo Cadastro
+    <span class="fa fa-plus"><c:out value=" " /></span> Novo Cadastro
 
 </a>
