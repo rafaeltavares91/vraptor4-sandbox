@@ -7,3 +7,9 @@ body {
     font-size:13px;
     text-rendering:optimizeLegibility;
 }
+
+.invisivel {
+    display: none;
+    min-height: 0px !important;
+    min-width: 0px !important;
+}

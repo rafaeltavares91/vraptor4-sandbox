@@ -9,6 +9,7 @@ import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.view.Results;
 import br.edu.unirn.anotacoes.Transacional;
+import br.edu.unirn.mensagem.MensagemSucesso;
 import br.edu.unirn.modelo.dao.CategoriaDao;
 import br.edu.unirn.modelo.dao.ProdutoDao;
 import br.edu.unirn.modelo.entidade.Categoria;
@@ -42,6 +43,8 @@ public class ProdutoController {
 		if (produto.getCategoria() != null) {
 			produto.setCategoria(categoriaDao.buscar(produto.getCategoria().getId()));
 			dao.salvar(produto);
+			MensagemSucesso mensagem = new MensagemSucesso("mensagem.sucesso.descricao");
+			result.include(mensagem);
 		}
 		result.redirectTo(this).lista();
 	}
@@ -67,6 +70,8 @@ public class ProdutoController {
 	@Transacional
 	public void deletar(Long id) {
 		dao.deletar(id);
+		MensagemSucesso mensagem = new MensagemSucesso("mensagem.remocao.sucesso");
+		result.include(mensagem);
 		result.redirectTo(this).lista();
 	}
 }

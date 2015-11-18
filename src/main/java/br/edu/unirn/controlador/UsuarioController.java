@@ -9,6 +9,7 @@ import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.view.Results;
 import br.edu.unirn.anotacoes.Transacional;
+import br.edu.unirn.mensagem.MensagemSucesso;
 import br.edu.unirn.modelo.dao.UsuarioDao;
 import br.edu.unirn.modelo.entidade.Usuario;
 
@@ -34,6 +35,8 @@ public class UsuarioController {
 	@Transacional
 	public void salvar(Usuario usuario){
 		usuarioDao.salvar(usuario);
+		MensagemSucesso mensagem = new MensagemSucesso("mensagem.sucesso.descricao");
+		result.include(mensagem);
 		result.redirectTo(this).lista();
 	}
 	
@@ -59,6 +62,8 @@ public class UsuarioController {
 	@Transacional
 	public void deletar(Long id) {
 		usuarioDao.deletar(id);
+		MensagemSucesso mensagem = new MensagemSucesso("mensagem.remocao.sucesso");
+		result.include(mensagem);
 		result.redirectTo(this).lista();
 	}
 }

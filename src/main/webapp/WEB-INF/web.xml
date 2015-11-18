@@ -4,4 +4,16 @@
   <listener>
     <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
   </listener>
+
+  <!-- Especifica o messages para a tag JSTL fmt -->
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+    <param-value>messages</param-value>
+  </context-param>
+
+  <!-- Especificação dos locales disponíveis para a internacionalização dos javascripts -->
+  <context-param>
+    <param-name>locales</param-name>
+    <param-value>pt_BR</param-value>
+  </context-param>
 </web-app>
