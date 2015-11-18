@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="${ctx}/resources/datatables/css/dataTables.custom.css" />
         <link rel="stylesheet" href="${ctx}/resources/datatables/css/DT_bootstrap.css" />
         <link rel="stylesheet" href="${ctx}/resources/datatables/css/dataTables.fontAwesome.css" />
+        <link rel="stylesheet" href="${ctx}/resources/font-awesome-4.4.0/css/font-awesome.css" />
         <link rel="stylesheet" href="${ctx}/resources/estilo.css" />
         <link rel="stylesheet" href="${ctx}/resources/bootstrap/css/bootstrap.min.css" />
     </head>
@@ -20,12 +21,6 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" href="http://logiquesistemas.com.br/">
                         <img src="${ctx}/resources/imagens/logo.png" alt="Logique Sistemas"/>
                     </a>
@@ -109,7 +104,7 @@
         <script src="${ctx}/resources/bootstrap/js/bootstrap.min.js"><c:out value=""/></script>
         <script src="${ctx}/resources/datatables/js/jquery.dataTables.js"><c:out value=""/></script>
         <script src="${ctx}/resources/datatables/js/DT_bootstrap.js"><c:out value=""/></script>
-        <script src="${ctx}/resources/tabela.js"><c:out value=""/></script>
+        <script src="${ctx}/resources/tabelaDinamica.js"><c:out value=""/></script>
     </body>
 </html>
 </jsp:root>

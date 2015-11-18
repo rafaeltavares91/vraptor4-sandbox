@@ -5,7 +5,7 @@
 	<artifactId>vraptor4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>VRaptor 4 Tavares</name>
+	<name>VRaptor 4 Teste</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
