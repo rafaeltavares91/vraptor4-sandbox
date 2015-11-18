@@ -20,8 +20,7 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -32,8 +31,7 @@
                     </a>
                 </div>
 
-                <div class="collapse navbar-collapse"
-                     id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="${linkTo[InicioController].index}">Inicio</a></li>
                         <li><a href="${linkTo[ProdutoController].lista}">Produto</a></li>
@@ -60,7 +58,7 @@
             </div>
         </nav>
 
-        <br/><br/><br/><br/> <!-- trocar isso aqui por margin -->
+        <br/><br/><br/><br/>
 
         <div class="container">
             <jsp:doBody />
@@ -78,7 +76,7 @@
 
                     <div class="col-sm-4">
                         <h6 style="color: #FFFFFF">Sobre</h6>
-                        <p style="font-size: 11px; color: #FFFFFF;">Sou analista e desenvolvedor de software, foco na plataforma Java e possuo conhecimento em tecnologias como JavaServer Faces, PrimeFaces, Vraptor 4, Spring, CDI, JPA, Hibernate, Maven... Bancos de dados SQL Server e PostgreSQL. Frontend com HTML5, CSS3 e Bootstrap.</p>
+                        <p style="font-size: 11px; color: #FFFFFF;">Sou analista e desenvolvedor de software, possuo conhecimento em tecnologias da plataforma Java como JavaServer Faces, PrimeFaces, Vraptor 4, Spring, CDI, JPA, Hibernate, Maven... Bancos de dados SQL Server e PostgreSQL. Frontend com HTML5, CSS3 e Bootstrap.</p>
                     </div>
 
                     <div class="col-sm-2">

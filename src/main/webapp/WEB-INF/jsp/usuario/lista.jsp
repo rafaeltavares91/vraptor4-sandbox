@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-		 pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="tags" uri="http://www.ufrn.br/tags" %>
@@ -15,32 +14,19 @@
 		
 		<br />
 
-		<a href="${linkTo[UsuarioController].form}" class="btn btn-primary">
-			<span class="glyphicon glyphicon-plus"></span>Novo Usuário
-		</a>
+		<tags:btNovoCadastro link="${linkTo[UsuarioController].form}" />
 
-		<div class="adv-table">
-			<table id="dataTable" class="table table-striped table-bordered">
-				<thead>
-					<tr>
-						<th>Nome</th>
-						<th>Login</th>
-						<th>Ação</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${usuarioList}" var="usuario">
-						<tr>
-							<td>${usuario.nome}</td>
-							<td>${usuario.login}</td>
-							<td>
-								<a href="${linkTo[UsuarioController].editar}?id=${usuario.id}"> <span class="glyphicon glyphicon-edit"></span> Editar </a>
-								<a href="${linkTo[UsuarioController].deletar}?id=${usuario.id}"> <span class="glyphicon glyphicon-trash"></span> Deletar </a>
-							</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
+		<tags:tabelaDinamica id="tabela" cabecalho="Nome, Login">
+			<c:forEach items="${usuarioList}" var="usuario">
+				<tr>
+					<td>${usuario.nome}</td>
+					<td>${usuario.login}</td>
+					<td>
+						<a href="${linkTo[UsuarioController].editar}?id=${usuario.id}"> <span class="glyphicon glyphicon-edit"></span> Editar </a>
+						<a href="${linkTo[UsuarioController].deletar}?id=${usuario.id}"> <span class="glyphicon glyphicon-trash"></span> Deletar </a>
+					</td>
+				</tr>
+			</c:forEach>
+		</tags:tabelaDinamica>
 	</jsp:body>
 </tags:layout>
