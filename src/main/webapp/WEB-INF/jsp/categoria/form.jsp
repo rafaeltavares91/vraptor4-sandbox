@@ -8,22 +8,13 @@
 <tags:layout>
 	<jsp:body>
 		<tags:tabs link="${linkTo[CategoriaController].lista}" isForm="${true}" />
+		<tags:formulario id="form" action="${linkTo[CategoriaController].salvar}" titulo="Cadastrar Categoria">
+			<input type="hidden" name="categoria.id" value="${categoria.id}" />
 
-		<form role="form" action="${linkTo[CategoriaController].salvar}" method="post">
-			<fieldset>
-				<legend>Cadastrar Categoria</legend>
-				<input type="hidden" name="categoria.id" value="${categoria.id}" />
-
-				<div class="form-group">
-					<label> Nome: </label> <input type="text" name="categoria.nome"
-						class="form-control" value="${categoria.nome}" />
-				</div>
-
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary"> <i class="fa fa-check"> </i> <span>Salvar</span> </button>
-					<a href="${linkTo[CategoriaController].lista}" class="btn btn-default" role="button"> <i class="fa fa-reply"> </i> <span>Voltar</span> </a>
-				</div>
-			</fieldset>
-		</form>
+			<div class="form-group">
+				<label> Nome: </label> <input type="text" name="categoria.nome"
+					class="form-control" value="${categoria.nome}" />
+			</div>
+		</tags:formulario>
 	</jsp:body>
 </tags:layout>

@@ -20,8 +20,23 @@
     </tag-file>
 
     <tag-file>
+        <name>formulario</name>
+        <path>/WEB-INF/tags/componente/formulario.tagx</path>
+    </tag-file>
+
+    <tag-file>
         <name>btNovoCadastro</name>
         <path>/WEB-INF/tags/botao/btNovoCadastro.tagx</path>
+    </tag-file>
+
+    <tag-file>
+        <name>btMinEditar</name>
+        <path>/WEB-INF/tags/botao/btMinEditar.tagx</path>
+    </tag-file>
+
+    <tag-file>
+        <name>btMinDeletar</name>
+        <path>/WEB-INF/tags/botao/btMinDeletar.tagx</path>
     </tag-file>
 
     <tag-file>

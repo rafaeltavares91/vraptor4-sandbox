@@ -16,8 +16,8 @@
 				<tr>
 					<td>${categoria.nome}</td>
 					<td>
-						<a href="${linkTo[CategoriaController].editar}?id=${categoria.id}" class="btn btn-warning btn-xs"> <span class="fa fa-edit"></span> Editar </a>
-						<a href="${linkTo[CategoriaController].deletar}?id=${categoria.id}" class="btn btn-danger btn-xs"> <span class="fa fa-trash-o"></span> Deletar </a>
+						<tags:btMinEditar link="${linkTo[CategoriaController].editar}?id=${categoria.id}" />
+						<tags:btMinDeletar link="${linkTo[CategoriaController].deletar}?id=${categoria.id}" />
 					</td>
 				</tr>
 			</c:forEach>

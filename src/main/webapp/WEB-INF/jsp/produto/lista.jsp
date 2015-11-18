@@ -17,8 +17,8 @@
 					<td>${produto.nome}</td>
 					<td>${produto.categoria.nome}</td>
 					<td>
-						<a href="${linkTo[ProdutoController].editar}?id=${produto.id}" class="btn btn-warning btn-xs"> <span class="fa fa-edit"></span> Editar </a>
-						<a href="${linkTo[ProdutoController].deletar}?id=${produto.id}" class="btn btn-danger btn-xs"> <span class="fa fa-trash-o"></span> Deletar </a>
+						<tags:btMinEditar link="${linkTo[ProdutoController].editar}?id=${produto.id}" />
+						<tags:btMinDeletar link="${linkTo[ProdutoController].deletar}?id=${produto.id}" />
 					</td>
 				</tr>
 			</c:forEach>

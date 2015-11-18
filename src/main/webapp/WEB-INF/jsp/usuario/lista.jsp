@@ -17,8 +17,8 @@
 					<td>${usuario.nome}</td>
 					<td>${usuario.login}</td>
 					<td>
-						<a href="${linkTo[UsuarioController].editar}?id=${usuario.id}" class="btn btn-warning btn-xs"> <span class="fa fa-edit"></span> Editar </a>
-						<a href="${linkTo[UsuarioController].deletar}?id=${usuario.id}" class="btn btn-danger btn-xs"> <span class="fa fa-trash-o"></span> Deletar </a>
+						<tags:btMinEditar link="${linkTo[UsuarioController].editar}?id=${usuario.id}" />
+						<tags:btMinDeletar link="${linkTo[UsuarioController].deletar}?id=${usuario.id}" />
 					</td>
 				</tr>
 			</c:forEach>

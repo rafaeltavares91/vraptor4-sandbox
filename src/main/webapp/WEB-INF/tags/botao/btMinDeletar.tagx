@@ -1,0 +1,10 @@
+<a xmlns:c="http://java.sun.com/jsp/jstl/core"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+   href="${link}" title="Deletar" class="btn btn-danger btn-xs">
+
+    <jsp:directive.attribute name="link" required="true" rtexprvalue="true" description="Endereço de destino" />
+
+    <i class="fa fa-trash-o"><c:out value="" /></i> Deletar
+
+</a>

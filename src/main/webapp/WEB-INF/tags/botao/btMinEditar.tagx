@@ -1,0 +1,10 @@
+<a xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:jsp="http://java.sun.com/JSP/Page"
+    xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+    href="${link}" title="Editar" class="btn btn-warning btn-xs">
+
+	<jsp:directive.attribute name="link" required="true" rtexprvalue="true" description="Endereço de destino" />
+
+    <i class="fa fa-edit"><c:out value="" /></i> Editar
+
+</a>

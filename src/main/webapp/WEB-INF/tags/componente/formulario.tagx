@@ -1,0 +1,22 @@
+<form xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      role="form" id="${id}" action="${action}" method="post">
+
+    <jsp:directive.attribute name="id" required="true" rtexprvalue="true" description="ID do formulário" />
+    <jsp:directive.attribute name="action" required="true" rtexprvalue="true" description="Endereço da ação" />
+    <jsp:directive.attribute name="titulo" required="true" rtexprvalue="true" description="Título do formulário" />
+
+    <fieldset>
+        <legend>${titulo}</legend>
+        <jsp:doBody />
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-check"> <c:out value=" " /> </i> <span> Salvar </span>
+            </button>
+            <c:out value=" " />
+            <a href="javascript:history.back()" class="btn btn-default" role="button">
+                <i class="fa fa-reply"> <c:out value=" " /> </i> <span> Voltar </span>
+            </a>
+        </div>
+    </fieldset>
+</form>

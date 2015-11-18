@@ -27,8 +27,8 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="http://logiquesistemas.com.br/">
-                        <img src="${ctx}/resources/imagens/logo.png" alt="Logique Sistemas"/>
+                    <a class="navbar-brand" href="http://www.ufrn.br">
+                        <img src="${ctx}/resources/imagens/logo.png" alt="UFRN"/>
                     </a>
                 </div>
 
