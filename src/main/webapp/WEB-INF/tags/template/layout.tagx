@@ -4,7 +4,6 @@
 
 &lt;!DOCTYPE html&gt;
 <html>
-    <!-- variável de contexto -->
     <c:set var="ctx" value="${pageContext.request.contextPath}" />
 
     <head>
@@ -61,11 +60,16 @@
             </div>
         </nav>
 
+        <br/><br/><br/><br/> <!-- trocar isso aqui por margin -->
+
         <div class="container">
             <jsp:doBody />
         </div>
 
+        <br/>
+
         <footer style="background-color: #404040;">
+            <br/>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2">
@@ -101,6 +105,7 @@
                     </div>
                 </div>
             </div>
+            <br/>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"><c:out value=""/></script>
         <script src="${ctx}/resources/bootstrap/js/bootstrap.min.js"><c:out value=""/></script>
