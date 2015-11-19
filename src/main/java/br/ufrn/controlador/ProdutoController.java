@@ -12,8 +12,8 @@ import br.ufrn.anotacoes.Transacional;
 import br.ufrn.mensagem.MensagemSucesso;
 import br.ufrn.modelo.dao.CategoriaDao;
 import br.ufrn.modelo.dao.ProdutoDao;
-import br.ufrn.modelo.entidade.Categoria;
-import br.ufrn.modelo.entidade.Produto;
+import br.ufrn.modelo.dominio.Categoria;
+import br.ufrn.modelo.dominio.Produto;
 
 @Controller
 public class ProdutoController {

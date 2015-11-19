@@ -11,7 +11,7 @@ import br.com.caelum.vraptor.view.Results;
 import br.ufrn.anotacoes.Transacional;
 import br.ufrn.mensagem.MensagemSucesso;
 import br.ufrn.modelo.dao.CategoriaDao;
-import br.ufrn.modelo.entidade.Categoria;
+import br.ufrn.modelo.dominio.Categoria;
 
 @Controller
 public class CategoriaController {

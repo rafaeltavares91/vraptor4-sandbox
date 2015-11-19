@@ -6,9 +6,9 @@ public class MensagemSucesso extends Mensagem{
         super();
     }
 
-    public MensagemSucesso(String chaveMensagem) {
+    public MensagemSucesso(String notificacao) {
         super();
-        addNotificacao(chaveMensagem);
+        addNotificacao(notificacao);
     }
 
     @Override

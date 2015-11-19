@@ -5,7 +5,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 import br.ufrn.modelo.dao.CategoriaDao;
-import br.ufrn.modelo.entidade.Categoria;
+import br.ufrn.modelo.dominio.Categoria;
 
 @RequestScoped
 public class CategoriaJpaDao extends JpaDao<Categoria> implements CategoriaDao{

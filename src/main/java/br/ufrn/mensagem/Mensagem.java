@@ -26,13 +26,13 @@ public abstract  class Mensagem implements Serializable {
         return ResourceBundle.getBundle("messages").getString(chaveMensagem);
     }
 
-    public void addNotificacao(String chaveMensagem) {
-        notificacoes.add(i18n(chaveMensagem));
+    public void addNotificacao(String notificacao) {
+        notificacoes.add(i18n(notificacao));
     }
 
-    public void addNotificacoes(List<String> chavesMensagens) {
-        for (String chave : chavesMensagens) {
-            addNotificacao(chave);
+    public void addNotificacoes(List<String> notificacoes) {
+        for (String notificacao : notificacoes) {
+            addNotificacao(notificacao);
         }
     }
 

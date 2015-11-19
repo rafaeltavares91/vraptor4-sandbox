@@ -11,7 +11,7 @@ import br.com.caelum.vraptor.view.Results;
 import br.ufrn.anotacoes.Transacional;
 import br.ufrn.mensagem.MensagemSucesso;
 import br.ufrn.modelo.dao.UsuarioDao;
-import br.ufrn.modelo.entidade.Usuario;
+import br.ufrn.modelo.dominio.Usuario;
 
 @Controller
 public class UsuarioController {

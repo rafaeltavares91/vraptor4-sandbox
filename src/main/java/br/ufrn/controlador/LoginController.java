@@ -5,23 +5,30 @@ import javax.inject.Inject;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
+import br.ufrn.mensagem.Mensagem;
+import br.ufrn.mensagem.MensagemErro;
+import br.ufrn.mensagem.MensagemSucesso;
 import br.ufrn.modelo.dao.UsuarioDao;
-import br.ufrn.modelo.entidade.Usuario;
+import br.ufrn.modelo.dominio.DadosSessao;
+import br.ufrn.modelo.dominio.Usuario;
 
 @Controller
 public class LoginController {
 
 	private Result result;
 	private UsuarioDao usuarioDao;
+	private DadosSessao dadosSessao;
+	private static final int TRES_HORAS = 10800;
 	
 	@Inject
-	public LoginController(Result result, UsuarioDao usuarioDao){
+	public LoginController(Result result, UsuarioDao usuarioDao, DadosSessao dadosSessao){
 		this.result = result;
 		this.usuarioDao = usuarioDao;
+		this.dadosSessao = dadosSessao;
 	}
 	
 	public LoginController() {
-		this(null, null);
+		this(null, null, null);
 	}
 	
 	@Path("/")
@@ -30,7 +37,13 @@ public class LoginController {
 	
 	public void logar (Usuario usuario) {
 		if (usuarioDao.possuiPermissaoLogar(usuario) || checarRoot(usuario)) {
+			dadosSessao.setUsuarioLogado(usuario);
+			dadosSessao.setTempoSessao(TRES_HORAS);
 			result.redirectTo(InicioController.class).index();
+		} else {
+			Mensagem mensagem = new MensagemErro("mensagem.erro.logar");
+			result.include(mensagem);
+			result.redirectTo(this).login();
 		}
 	}
 

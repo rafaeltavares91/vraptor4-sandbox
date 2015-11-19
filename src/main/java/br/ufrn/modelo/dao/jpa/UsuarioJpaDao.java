@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import br.ufrn.modelo.dao.UsuarioDao;
-import br.ufrn.modelo.entidade.Usuario;
+import br.ufrn.modelo.dominio.Usuario;
 
 @RequestScoped
 public class UsuarioJpaDao extends JpaDao<Usuario> implements UsuarioDao {

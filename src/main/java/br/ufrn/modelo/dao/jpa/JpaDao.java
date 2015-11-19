@@ -1,6 +1,6 @@
 package br.ufrn.modelo.dao.jpa;
 
-import br.ufrn.modelo.entidade.Entidade;
+import br.ufrn.modelo.dominio.Entidade;
 import br.ufrn.modelo.dao.Dao;
 
 import java.lang.reflect.ParameterizedType;

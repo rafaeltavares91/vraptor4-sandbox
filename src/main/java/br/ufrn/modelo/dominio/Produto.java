@@ -1,4 +1,4 @@
-package br.ufrn.modelo.entidade;
+package br.ufrn.modelo.dominio;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Entity;
