@@ -9,6 +9,8 @@
 	<jsp:body>
 		<tags:tabs link="${linkTo[UsuarioController].lista}" isForm="${true}" />
 		<tags:formulario id="form" action="${linkTo[UsuarioController].salvar}" titulo="Cadastrar Usuário">
+			<input type="hidden" name="usuario.id" value="${usuario.id}" />
+
 			<div class="form-group">
 				<label> Nome: </label> <input type="text" name="usuario.nome"
 					class="form-control" value="${usuario.nome}" />
@@ -20,7 +22,7 @@
 			</div>
 
 			<div class="form-group">
-				<label> Senha: </label> <input type="password" name="usuario.senha"
+				<label> Senha: </label> <input type="text" name="usuario.senha"
 					class="form-control" value="${usuario.senha}" />
 			</div>
 		</tags:formulario>

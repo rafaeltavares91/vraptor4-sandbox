@@ -7,7 +7,6 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
 import br.ufrn.mensagem.Mensagem;
 import br.ufrn.mensagem.MensagemErro;
-import br.ufrn.mensagem.MensagemSucesso;
 import br.ufrn.modelo.dao.UsuarioDao;
 import br.ufrn.modelo.dominio.DadosSessao;
 import br.ufrn.modelo.dominio.Usuario;
@@ -36,8 +35,9 @@ public class LoginController {
 	}
 	
 	public void logar (Usuario usuario) {
-		if (usuarioDao.possuiPermissaoLogar(usuario) || checarRoot(usuario)) {
-			dadosSessao.setUsuarioLogado(usuario);
+		Usuario usuarioLogado = usuarioDao.buscarUsuario(usuario);
+		if (usuarioLogado != null) {
+			dadosSessao.setUsuarioLogado(usuarioLogado);
 			dadosSessao.setTempoSessao(TRES_HORAS);
 			result.redirectTo(InicioController.class).index();
 		} else {

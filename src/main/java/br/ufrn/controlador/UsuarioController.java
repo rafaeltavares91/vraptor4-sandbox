@@ -17,12 +17,12 @@ import br.ufrn.modelo.dominio.Usuario;
 public class UsuarioController {
 
 	private Result result;
-	private UsuarioDao usuarioDao;
+	private UsuarioDao dao;
 	
 	@Inject
-	public UsuarioController(Result result, UsuarioDao usuarioDao){
+	public UsuarioController(Result result, UsuarioDao dao){
 		this.result = result;
-		this.usuarioDao = usuarioDao;
+		this.dao = dao;
 	}
 	
 	public UsuarioController(){
@@ -34,7 +34,7 @@ public class UsuarioController {
 	
 	@Transacional
 	public void salvar(Usuario usuario){
-		usuarioDao.salvar(usuario);
+		dao.salvar(usuario);
 		MensagemSucesso mensagem = new MensagemSucesso("mensagem.sucesso.descricao");
 		result.include(mensagem);
 		result.redirectTo(this).lista();
@@ -42,26 +42,26 @@ public class UsuarioController {
 	
 	@Get
 	public void lista() {
-		List<Usuario> usuarioList = usuarioDao.listarTodos();
+		List<Usuario> usuarioList = dao.listarTodos();
 		result.include("usuarioList", usuarioList);
 	}
 	
 	@Get
 	public void listar() {
-		List<Usuario> usuarioList = usuarioDao.listarTodos();
+		List<Usuario> usuarioList = dao.listarTodos();
 		result.use(Results.json()).from(usuarioList).recursive().serialize();
     }
 	
 	@Transacional
 	public void editar(Long id) {
-		Usuario usuario = usuarioDao.buscar(id);
+		Usuario usuario = dao.buscar(id);
 		result.include(usuario);
 		result.redirectTo(this).form();
 	}
 	
 	@Transacional
 	public void deletar(Long id) {
-		usuarioDao.deletar(id);
+		dao.deletar(id);
 		MensagemSucesso mensagem = new MensagemSucesso("mensagem.remocao.sucesso");
 		result.include(mensagem);
 		result.redirectTo(this).lista();
