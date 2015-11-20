@@ -5,8 +5,8 @@ import javax.inject.Inject;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
-import br.ufrn.mensagem.Mensagem;
 import br.ufrn.mensagem.MensagemErro;
+import br.ufrn.mensagem.MensagemInformacao;
 import br.ufrn.modelo.dao.UsuarioDao;
 import br.ufrn.modelo.dominio.DadosSessao;
 import br.ufrn.modelo.dominio.Usuario;
@@ -35,23 +35,20 @@ public class LoginController {
 	}
 	
 	public void logar (Usuario usuario) {
-		Usuario usuarioLogado = usuarioDao.buscarUsuario(usuario);
-		if (usuarioLogado != null) {
-			dadosSessao.setUsuarioLogado(usuarioLogado);
+		if (usuarioDao.possuiPermissaoLogar(usuario)) {
+			Usuario usuariologado = usuarioDao.buscarPorLogin(usuario);
+			dadosSessao.setUsuarioLogado(usuariologado);
 			dadosSessao.setTempoSessao(TRES_HORAS);
 			result.redirectTo(InicioController.class).index();
 		} else {
-			Mensagem mensagem = new MensagemErro("mensagem.erro.logar");
-			result.include(mensagem);
+			result.include(new MensagemErro("mensagem.erro.logar"));
 			result.redirectTo(this).login();
 		}
 	}
 
-	private boolean checarRoot(Usuario usuario) {
-		boolean possuiPermissao = false;
-		if (usuario.getLogin().equals("root") && usuario.getSenha().equals("123456")) {
-			possuiPermissao = true;
-		}
-		return possuiPermissao;
+	public void logout() {
+		result.include(new MensagemInformacao("mensagem.logout"));
+		dadosSessao.destruir();
+		result.of(this).login();
 	}
 }

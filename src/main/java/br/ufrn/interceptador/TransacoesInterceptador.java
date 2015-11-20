@@ -11,16 +11,16 @@ import br.ufrn.anotacoes.Transacional;
 
 @Intercepts
 @AcceptsWithAnnotations(Transacional.class)
-public class InterceptadorTransacoes {
+public class TransacoesInterceptador {
 
 	private EntityManager entityManager;
 	
 	@Inject
-	public InterceptadorTransacoes (EntityManager manager) {
+	public TransacoesInterceptador(EntityManager manager) {
 		this.entityManager = manager;
 	}
 
-	public InterceptadorTransacoes(){
+	public TransacoesInterceptador(){
 		this(null);
 	}
 	

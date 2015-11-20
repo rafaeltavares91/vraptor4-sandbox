@@ -4,6 +4,8 @@ import br.ufrn.modelo.dominio.Usuario;
 
 public interface UsuarioDao extends Dao<Usuario> {
 
-	Usuario buscarUsuario(Usuario usuario);
+	boolean possuiPermissaoLogar(Usuario usuario);
+
+	Usuario buscarPorLogin(Usuario usuario);
 
 }

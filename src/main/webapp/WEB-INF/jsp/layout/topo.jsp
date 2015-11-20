@@ -29,7 +29,7 @@
                         <li><a href="#">Akun</a></li>
                         <li><a href="#">About</a></li>
                         <li class="divider"></li>
-                        <li><a href="${linkTo[LoginController].login}">Logout</a></li>
+                        <li><a href="${linkTo[LoginController].logout}">Logout</a></li>
                     </ul>
                 </li>
             </ul>

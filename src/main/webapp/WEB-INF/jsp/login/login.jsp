@@ -36,6 +36,38 @@
 									</div>
 								</div>
 							</div>
+							<div id="notificacaoAtencao" <c:out value="${empty mensagemAtencao ? 'class=invisivel' : '' }"></c:out>>
+								<div class="alert alert-block alert-warning fade in">
+									<button data-dismiss="alert" class="close close-sm" type="button">
+										<i class="fa fa-times"></i>
+									</button>
+									<h4>
+										<i class="icon-ok-sign"></i>
+										<strong><fmt:message key="mensagem.atencao.titulo"/></strong>
+									</h4>
+									<div class="notificacoes">
+										<c:forEach items="${mensagemAtencao.notificacoes}" var="notificacao">
+											<p>${notificacao}</p>
+										</c:forEach>
+									</div>
+								</div>
+							</div>
+							<div id="notificacaoInformacao" <c:out value="${empty mensagemInformacao ? 'class=invisivel' : '' }"></c:out>>
+								<div class="alert alert-block alert-info fade in">
+									<button data-dismiss="alert" class="close close-sm" type="button">
+										<i class="fa fa-times"></i>
+									</button>
+									<h4>
+										<i class="icon-ok-sign"></i>
+										<strong><fmt:message key="mensagem.informacao.titulo"/></strong>
+									</h4>
+									<div class="notificacoes">
+										<c:forEach items="${mensagemInformacao.notificacoes}" var="notificacao">
+											<p>${notificacao}</p>
+										</c:forEach>
+									</div>
+								</div>
+							</div>
 							<h3>Login Form</h3>
 						</div>
 						<form role="form" action="${linkTo[LoginController].logar}" method="post">

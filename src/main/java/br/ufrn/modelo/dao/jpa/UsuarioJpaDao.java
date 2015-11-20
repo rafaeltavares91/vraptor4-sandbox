@@ -17,11 +17,22 @@ public class UsuarioJpaDao extends JpaDao<Usuario> implements UsuarioDao {
 	}
 
 	@Override
-	public Usuario buscarUsuario(Usuario usuario) {
+	public boolean possuiPermissaoLogar(Usuario usuario) {
+		boolean possuiPermissao = false;
 		Query query = entityManager.createQuery("from Usuario u "
 				+ "where u.login = :login and u.senha = :senha");
 		query.setParameter("login", usuario.getLogin());
 		query.setParameter("senha", usuario.getSenha());
+		if (query.getResultList().size() > 0) {
+			possuiPermissao = true;
+		}
+		return possuiPermissao;
+	}
+
+	@Override
+	public Usuario buscarPorLogin(Usuario usuario) {
+		Query query = entityManager.createQuery("from Usuario u where u.login = :login");
+		query.setParameter("login", usuario.getLogin());
 		return (Usuario) query.getSingleResult();
 	}
 	

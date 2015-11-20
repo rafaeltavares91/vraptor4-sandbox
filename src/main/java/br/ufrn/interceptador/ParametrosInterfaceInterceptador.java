@@ -14,7 +14,7 @@ import br.ufrn.util.IdentificadorRequisicao;
 import javax.inject.Inject;
 
 @Intercepts
-public class InterceptadorParametrosInterface {
+public class ParametrosInterfaceInterceptador {
 
     private final Result result;
     private final MutableRequest request;
@@ -24,12 +24,12 @@ public class InterceptadorParametrosInterface {
      * @deprecated Usado pelo CDI
      */
     @Deprecated
-    public InterceptadorParametrosInterface() {
+    public ParametrosInterfaceInterceptador() {
         this(null, null, null);
     }
 
     @Inject
-    public InterceptadorParametrosInterface(Result result, MutableRequest request, DadosSessao dadosSessao) {
+    public ParametrosInterfaceInterceptador(Result result, MutableRequest request, DadosSessao dadosSessao) {
         this.result = result;
         this.request = request;
         this.dadosSessao = dadosSessao;
