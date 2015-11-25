@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -21,7 +23,9 @@ public class Categoria extends Entidade {
 	@SequenceGenerator(name = "categoria_seq", sequenceName = "categoria_seq", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categoria_seq")
 	private Long id;
-	
+
+	@Size(min = 2, max = 255, message = "{nome.size}")
+	@NotNull(message = "{nome.notNull}")
 	private String nome;
 
 	public Long getId() {

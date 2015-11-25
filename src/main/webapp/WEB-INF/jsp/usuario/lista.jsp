@@ -11,11 +11,12 @@
 
 		<tags:btNovoCadastro link="${linkTo[UsuarioController].form}" />
 
-		<tags:tabelaDinamica id="tabela" cabecalho="Nome, Login">
+		<tags:tabelaDinamica id="tabela" cabecalho="Nome, Login, Senha">
 			<c:forEach items="${usuarioList}" var="usuario">
 				<tr>
 					<td>${usuario.nome}</td>
 					<td>${usuario.login}</td>
+					<td>${usuario.senha}</td>
 					<td>
 						<tags:btMinEditar link="${linkTo[UsuarioController].editar}?id=${usuario.id}" />
 						<tags:btMinDeletar link="${linkTo[UsuarioController].deletar}?id=${usuario.id}" />

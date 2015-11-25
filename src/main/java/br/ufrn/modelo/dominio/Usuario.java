@@ -1,10 +1,13 @@
 package br.ufrn.modelo.dominio;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -14,13 +17,23 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 public class Usuario extends Entidade {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@SequenceGenerator(name = "usuario_seq", sequenceName = "usuario_seq", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuario_seq")
 	private Long id;
+
+	@Size(min = 2, max = 255, message = "{nome.size}")
+	@NotNull(message = "{nome.notNull}")
 	private String nome;
+
+	@Column(unique = true)
+	@Size(min = 2, max = 20, message = "{login.size}")
+	@NotNull(message = "{login.notNull}")
 	private String login;
+
+	@Size(min = 6, max = 20, message = "{senha.size}")
+	@NotNull(message = "{senha.notNull}")
 	private String senha;
 	
 	public Long getId() {

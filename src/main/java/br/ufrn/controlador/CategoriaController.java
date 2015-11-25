@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.validator.Validator;
 import br.com.caelum.vraptor.view.Results;
 import br.ufrn.anotacoes.Transacional;
 import br.ufrn.mensagem.MensagemSucesso;
@@ -18,15 +19,17 @@ public class CategoriaController {
 
 	private Result result;
 	private CategoriaDao dao;
+	private Validator validator;
 	
 	@Inject
-	public CategoriaController (Result result, CategoriaDao dao) {
+	public CategoriaController (Result result, CategoriaDao dao, Validator validator) {
 		this.result = result;
 		this.dao = dao;
+		this.validator = validator;
 	}
 	
 	public CategoriaController () {
-		this(null, null);
+		this(null, null, null);
 	}
 	
 	public void form(){
@@ -34,6 +37,11 @@ public class CategoriaController {
 	
 	@Transacional
 	public void salvar(Categoria categoria){
+		validator.validate(categoria);
+		if (validator.hasErrors()) {
+			validator.onErrorRedirectTo(this).form();
+		}
+
 		dao.salvar(categoria);
 		MensagemSucesso mensagem = new MensagemSucesso("mensagem.sucesso.descricao");
 		result.include(mensagem);
@@ -52,7 +60,6 @@ public class CategoriaController {
 		result.use(Results.json()).withoutRoot().from(categoriaList).recursive().serialize();
     }
 	
-	@Transacional
 	public void editar(Long id) {
 		Categoria categoria = dao.buscar(id);
 		result.include(categoria);

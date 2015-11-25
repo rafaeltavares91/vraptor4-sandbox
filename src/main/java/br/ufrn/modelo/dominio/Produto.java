@@ -5,10 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -24,12 +24,13 @@ public class Produto extends Entidade {
 	@SequenceGenerator(name = "produto_seq", sequenceName = "produto_seq", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "produto_seq")
 	private Long id;
-	
+
+	@Size(min = 2, max = 255, message = "{nome.size}")
+	@NotNull(message = "{nome.notNull}")
 	private String nome;
 	
 	@ManyToOne()
     @NotNull(message = "O campo Categoria não pode ser vazio.")
-    @JoinColumn(name = "categoria_id")
 	private Categoria categoria;
 
 	public Long getId() {
