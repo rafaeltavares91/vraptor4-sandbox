@@ -44,6 +44,13 @@
 			<version>4.1.0.Final</version>
 		</dependency>
 
+		<!--Conversores de data-->
+		<dependency>
+			<groupId>br.com.caelum.vraptor</groupId>
+			<artifactId>vraptor-javatime</artifactId>
+			<version>4.1.0-RC2</version>
+		</dependency>
+
 		 <!-- CDI (Especificação) -->
 		<dependency>
 			<groupId>javax.inject</groupId>
@@ -51,40 +58,44 @@
 			<version>1</version>
 		</dependency>
 		
-		<!-- Weld (implementação do CDI - Core) -->
+		<!-- Weld (implementação do CDI) / Implementação -->
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet-core</artifactId>
 			<version>2.1.2.Final</version>
 		</dependency>
 
-		<!-- Weld (implementação do CDI - Implementação) -->
 		<dependency>
 			<groupId>org.jboss.weld</groupId>
 			<artifactId>weld-core-impl</artifactId>
 			<version>2.1.2.Final</version>
 		</dependency>
 
-		<!-- Hibernate Core -->
+		<!-- JPA (Especificação) / Implementação Hibernate -->
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>4.3.6.Final</version>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.0.Final</version>
 		</dependency>
 		
-		<!-- Implementação de EntityManager da JPA -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.3.6.Final</version>
+			<version>4.3.11.Final</version>
 		</dependency>
 
-		<!-- Hibernate Validator -->
+		<!-- Bean Validation / Implementação Hibernate -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator-cdi</artifactId>
 			<version>5.1.1.Final</version>
-		</dependency> 
+		</dependency>
 		
 		<!-- Hibernate Testing (Permite fazer second level cache fora de produção e sem EHCache)  
 		<dependency>
@@ -94,19 +105,17 @@
 			<scope>compile</scope>
 		</dependency> -->
 		
-		<!-- EHCache -->
+		<!-- EHCache / Implementação Hibernate -->
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache-core</artifactId>
 			<version>2.6.9</version>
-			<scope>compile</scope>
 		</dependency>
 		
-		<!-- Hibernate-EHCache -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-ehcache</artifactId>
-			<version>4.3.6.Final</version>
+			<version>4.3.11.Final</version>
 		    <exclusions>
 				<exclusion>
 					<groupId>net.sf.ehcache</groupId>
@@ -120,8 +129,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.7</version>
-			<scope>compile</scope>
+			<version>1.7.12</version>
 		</dependency>
 
 		<!-- Drive do postgres -->

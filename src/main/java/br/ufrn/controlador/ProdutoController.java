@@ -48,12 +48,9 @@ public class ProdutoController {
 			validator.onErrorRedirectTo(this).form();
 		}
 
-		if (produto.getCategoria() != null) {
-			produto.setCategoria(categoriaDao.buscar(produto.getCategoria().getId()));
-			dao.salvar(produto);
-			MensagemSucesso mensagem = new MensagemSucesso("mensagem.sucesso.descricao");
-			result.include(mensagem);
-		}
+		dao.salvar(produto);
+		MensagemSucesso mensagem = new MensagemSucesso("mensagem.sucesso.descricao");
+		result.include(mensagem);
 		result.redirectTo(this).lista();
 	}
 	

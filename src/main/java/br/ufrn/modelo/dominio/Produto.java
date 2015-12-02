@@ -30,7 +30,7 @@ public class Produto extends Entidade {
 	private String nome;
 	
 	@ManyToOne()
-    @NotNull(message = "O campo Categoria não pode ser vazio.")
+    @NotNull(message = "{categoria.notNull}")
 	private Categoria categoria;
 
 	public Long getId() {
