@@ -14,29 +14,6 @@
 
 	<dependencies>
 
-		<!-- Servlet API -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
-		
-		<!-- EL (Expression Language) -->
-		<dependency>
-			<groupId>javax.el</groupId>
-			<artifactId>el-api</artifactId>
-			<version>2.2</version>
-			<scope>provided</scope>
-		</dependency>
-		
-		<!-- JSTL (JSP Standard Tag Library) -->
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-
 		<!-- VRaptor (Framework MVC) -->
 		<dependency>
 			<groupId>br.com.caelum</groupId>
@@ -44,21 +21,28 @@
 			<version>4.1.0.Final</version>
 		</dependency>
 
-		<!--Conversores de data-->
+		<!-- Servlet API -->
 		<dependency>
-			<groupId>br.com.caelum.vraptor</groupId>
-			<artifactId>vraptor-javatime</artifactId>
-			<version>4.1.0-RC2</version>
-		</dependency>
-
-		 <!-- CDI (Especificação) -->
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 		
-		<!-- Weld (implementação do CDI) / Implementação -->
+		<!-- EL (Expression Language) -->
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<!-- JSTL (JSP Standard Tag Library) -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- CDI (Especificação) com implementação Weld -->
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet-core</artifactId>
@@ -71,20 +55,14 @@
 			<version>2.1.2.Final</version>
 		</dependency>
 
-		<!-- JPA (Especificação) / Implementação Hibernate -->
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.1-api</artifactId>
-			<version>1.0.0.Final</version>
-		</dependency>
-		
+		<!-- JPA (Especificação) com implementação Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.3.11.Final</version>
 		</dependency>
 
-		<!-- Bean Validation / Implementação Hibernate -->
+		<!-- Bean Validation (Especificação) com implementação Hibernate-Validator -->
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
@@ -96,16 +74,8 @@
 			<artifactId>hibernate-validator-cdi</artifactId>
 			<version>5.1.1.Final</version>
 		</dependency>
-		
-		<!-- Hibernate Testing (Permite fazer second level cache fora de produção e sem EHCache)  
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-testing</artifactId>
-			<version>4.3.6.Final</version>
-			<scope>compile</scope>
-		</dependency> -->
-		
-		<!-- EHCache / Implementação Hibernate -->
+
+		<!-- EHCache do Hibernate para second level cache -->
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache-core</artifactId>
@@ -137,6 +107,13 @@
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901-1.jdbc4</version>
+		</dependency>
+
+		<!-- Conversores de data java 8 -->
+		<dependency>
+			<groupId>br.com.caelum.vraptor</groupId>
+			<artifactId>vraptor-javatime</artifactId>
+			<version>4.1.0-RC2</version>
 		</dependency>
 
 	</dependencies>
