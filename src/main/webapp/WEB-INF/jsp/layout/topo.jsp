@@ -2,9 +2,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="http://www.ufrn.br">
                 <img src="${ctx}/resources/imagens/logo.png" alt="UFRN"/>
             </a>
@@ -18,7 +24,9 @@
                 <li><a href="${linkTo[UsuarioController].lista}">Usuário</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="fa fa-user"><c:out value=""/></span> ${usuarioLogado.nome} </a></li>
+                <li>
+                    <a href="#"><span class="fa fa-user"><c:out value=""/></span> ${usuarioLogado.nome} </a>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="fa fa-cog"><c:out value=""/></span>

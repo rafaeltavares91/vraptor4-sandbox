@@ -8,6 +8,16 @@ body {
     text-rendering:optimizeLegibility;
 }
 
+footer {
+    color: #e0e0e0;
+    font-size: 11px;
+    background-color: #222;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #e0e0e0 !important;
+}
+
 .invisivel {
     display: none;
     min-height: 0px !important;
