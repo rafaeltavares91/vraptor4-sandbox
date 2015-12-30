@@ -153,6 +153,4 @@
         }
     };
 
-}( jQuery ));/**
- * Created by Rafael on 18/11/15.
- */
+}( jQuery ));
