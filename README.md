@@ -6,5 +6,3 @@
   <li>Application Servers : Tomcat 8.x, Wildfly 8.x</li>
   <li>Summary : A JEE 7 based project which I use to test some technologies and the framework MVC VRaptor 4</li>
 </ul>
-
-<a href="https://github.com/rafaeltavares91/vraptor4-test">Download the code from GitHub</a>
