@@ -1,4 +1,4 @@
-# vraptor4-test
+# vraptor4-sandbox
 
 <ul>
   <li>Author : <a href="https://github.com/rafaeltavares91">Rafael Tavares</a></li>
